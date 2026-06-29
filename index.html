@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>STCA Academy</title>
+
+    
+    <!-- SEO -->
+    <meta name="description" content="1:1 tutoring in Addis Ababa for Python, Web Development, Scratch, Math and Exam Prep. Personalized coding and academic tutoring for all ages." />
+    <link rel="canonical" href="https://solethiocoder.github.io/Sol-Tutoring-And-Coding-Academy/index.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sol Tutoring & Coding Academy | STCA" />
+    <meta property="og:description" content="1:1 tutoring in Addis Ababa for Python, Web Development, Scratch, Math and Exam Prep. Personalized coding and academic tutoring for all ages." />
+    <meta property="og:url" content="https://solethiocoder.github.io/Sol-Tutoring-And-Coding-Academy/index.html" />
+    <meta property="og:image" content="https://solethiocoder.github.io/Sol-Tutoring-And-Coding-Academy/Images/logo.jpg" />
+    <meta property="og:site_name" content="Sol Tutoring & Coding Academy" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Sol Tutoring & Coding Academy | STCA" />
+    <meta name="twitter:description" content="1:1 tutoring in Addis Ababa for Python, Web Development, Scratch, Math and Exam Prep. Personalized coding and academic tutoring for all ages." />
+    <meta name="twitter:image" content="https://solethiocoder.github.io/Sol-Tutoring-And-Coding-Academy/Images/logo.jpg" />
+<!-- Favicon -->
+    <link rel="icon" href="/Images/favicon.ico" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts: Sora + Inter + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STCA shared theme -->
+    <link rel="stylesheet" href="/CSS/theme.css" />
+<!-- Custom CSS -->
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <style>
+      /* Dark Mode */
+      .dark-mode {
+        background-color: #121212 !important;
+        color: #f1f1f1 !important;
+      }
+      .dark-mode .bg-light {
+        background-color: #1e1e1e !important;
+      }
+      .dark-mode .bg-body-secondary {
+        background-color: #222 !important;
+      }
+      .dark-mode .btn-outline-warning {
+        color: #ffc107;
+        border-color: #ffc107;
+      }
+      .dark-mode .btn-outline-warning:hover {
+        background-color: #ffc107;
+        color: #000;
+      }
+
+      /* Feature Card Styles */
+      .feature-card,
+      .course-card {
+        border-radius: 15px;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+      .feature-card:hover,
+      .course-card:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
+      }
+      .feature-card i {
+        transition:
+          transform 0.3s ease,
+          color 0.3s ease;
+      }
+      .feature-card:hover i {
+        transform: rotate(-10deg) scale(1.2);
+        color: #ffc107;
+      }
+      .feature-card h4 {
+        transition: color 0.3s ease;
+      }
+      .feature-card:hover h4 {
+        color: #ff9800;
+      }
+
+      /* Courses Card */
+      .course-card img {
+        transition: transform 0.3s ease;
+      }
+      .course-card:hover img {
+        transform: scale(1.1);
+      }
+
+      /* Hero Animated Text */
+      .typed-text {
+        color: #ffc107;
+        font-weight: bold;
+      }
+
+      /* Hero Button */
+      .btn-hero {
+        animation: pulse 2s infinite;
+      }
+
+      section {
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="/index.html">
+          <img src="/Images/logo.jpg" alt="STCA Logo" height="30" />
+          STCA
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+          aria-controls="navmenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/HTML/courses.html">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/HTML/contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <button id="mode-toggle" class="btn btn-outline-warning btn-sm">
+                🌙 Dark
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="bg-dark text-light pt-5">
+      <canvas class="hero-3d-canvas" data-stca-network data-density="50"></canvas>
+<div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6" data-aos="fade-right">
+            <h1 class="display-5 fw-bold animate__animated animate__fadeInDown">
+              <span id="typed-text" class="typed-text">Learn Coding</span>
+            </h1>
+            <p class="lead animate__animated animate__fadeInUp">
+              Sol Tutoring & Coding Academy helps students master academics and
+              coding from scratch.
+            </p>
+            <a
+              href="HTML/courses.html"
+              class="btn btn-warning btn-lg mt-3 btn-hero"
+            >
+              Explore Courses
+            </a>
+          </div>
+
+          <div class="col-md-6 text-center" data-aos="zoom-in">
+            <img
+              src="/Images/logo.jpg"
+              alt="Coding Illustration"
+              class="img-fluid"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-md-4" data-aos="fade-up">
+            <div
+              class="card h-100 shadow-lg feature-card animate__animated animate__fadeInUp"
+            >
+              <div class="card-body">
+                <i class="bi bi-person-badge display-4 text-warning mb-3"></i>
+                <h4 class="fw-bold">Expert Tutors</h4>
+                <p>
+                  Experienced and passionate instructors guiding your journey.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+            <div
+              class="card h-100 shadow-lg feature-card animate__animated animate__fadeInUp animate__delay-1s"
+            >
+              <div class="card-body">
+                <i class="bi bi-code-slash display-4 text-warning mb-3"></i>
+                <h4 class="fw-bold">Practical Learning</h4>
+                <p>Hands-on projects and real-world coding exercises.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div
+              class="card h-100 shadow-lg feature-card animate__animated animate__fadeInUp animate__delay-2s"
+            >
+              <div class="card-body">
+                <i
+                  class="bi bi-currency-bitcoin display-4 text-warning mb-3"
+                ></i>
+                <h4 class="fw-bold">Affordable</h4>
+                <p>High-quality learning at fair prices without compromise.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSES CAROUSEL -->
+    <section class="py-5 bg-body-secondary">
+      <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Our Courses</h2>
+
+        <div
+          id="coursesCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- Carousel Item 1 -->
+            <div class="carousel-item active">
+              <div class="row g-4 justify-content-center">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                  <div class="card h-100 shadow-lg course-card">
+                    <img
+                      src="/Images/ict.avif"
+                      class="card-img-top"
+                      alt="Web Development"
+                    />
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Web Development</h5>
+                      <p class="card-text">
+                        HTML, CSS, JavaScript & mini projects.
+                      </p>
+                      <a href="/HTML/web-course.html" class="btn btn-warning"
+                        >View Course</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                  <div class="card h-100 shadow-lg course-card">
+                    <img
+                      src="/Images/math.avif"
+                      class="card-img-top"
+                      alt="Mathematics"
+                    />
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Mathematics</h5>
+                      <p class="card-text">
+                        Grade 5 - 12: Algebra, Geometry, Calculus...
+                      </p>
+                      <a href="/HTML/math-course.html" class="btn btn-warning"
+                        >View Course</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Item 2 -->
+            <div class="carousel-item">
+              <div class="row g-4 justify-content-center">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                  <div class="card h-100 shadow-lg course-card">
+                    <img
+                      src="/Images/scratch-cta.webp"
+                      class="card-img-top"
+                      alt="Scratch Programming"
+                    />
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Scratch Programming</h5>
+                      <p class="card-text">
+                        Learn coding visually with fun projects.
+                      </p>
+                      <a
+                        href="/HTML/scratch-course.html"
+                        class="btn btn-warning"
+                        >View Course</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                  <div class="card h-100 shadow-lg course-card">
+                    <img
+                      src="/Images/python.avif"
+                      class="card-img-top"
+                      alt="Python Programming"
+                    />
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Python Programming</h5>
+                      <p class="card-text">
+                        Python basics, projects, and real examples.
+                      </p>
+                      <a href="/HTML/python-course.html" class="btn btn-warning"
+                        >View Course</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Item 3 -->
+            <div class="carousel-item">
+              <div class="row g-4 justify-content-center">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                  <div class="card h-100 shadow-lg course-card">
+                    <img
+                      src="/Images/digital-literacy.avif"
+                      class="card-img-top"
+                      alt="Digital Literacy"
+                    />
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Digital Literacy</h5>
+                      <p class="card-text">
+                        Basic computer skills & internet essentials.
+                      </p>
+                      <a
+                        href="/HTML/digital-course.html"
+                        class="btn btn-warning"
+                        >View Course</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                  <div class="card h-100 shadow-lg course-card">
+                    <img
+                      src="/Images/final-exam.avif"
+                      class="card-img-top"
+                      alt="Exam Preparation"
+                    />
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Exam Preparation</h5>
+                      <p class="card-text">
+                        Structured guidance, past papers & exam strategies.
+                      </p>
+                      <a href="/HTML/exam-course.html" class="btn btn-warning"
+                        >View Course</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#coursesCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#coursesCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-5 testimonials-section">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="eyebrow eyebrow-light"><span class="dot"></span> What families are saying</span>
+          <h2 class="font-display fw-bold mt-2">Real students. Real progress.</h2>
+          <p class="text-muted">A few words from students and parents we've worked with.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="testimonial-card h-100">
+              <div class="stars mb-2">★★★★★</div>
+              <p class="testimonial-quote">
+                "My son went from barely touching a keyboard to building his
+                own Scratch games in two months. The tutors are patient and
+                genuinely care."
+              </p>
+              <div class="testimonial-author">
+                <div class="avatar-badge">HM</div>
+                <div>
+                  <div class="author-name">Helen M.</div>
+                  <div class="author-role">Parent — Scratch Programming</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="testimonial-card h-100">
+              <div class="stars mb-2">★★★★★</div>
+              <p class="testimonial-quote">
+                "I joined the Python course with zero experience. Three
+                months later I built a small automation script for my own
+                business. Worth every Birr."
+              </p>
+              <div class="testimonial-author">
+                <div class="avatar-badge">DT</div>
+                <div>
+                  <div class="author-name">Dawit T.</div>
+                  <div class="author-role">Student — Python Programming</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-card h-100">
+              <div class="stars mb-2">★★★★★</div>
+              <p class="testimonial-quote">
+                "The math tutoring helped my daughter go from struggling
+                with algebra to topping her class. The 1:1 attention makes
+                all the difference."
+              </p>
+              <div class="testimonial-author">
+                <div class="avatar-badge">SA</div>
+                <div>
+                  <div class="author-name">Selam A.</div>
+                  <div class="author-role">Parent — Math Tutoring</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-1 text-center stat-strip" data-aos="fade-up">
+          <div class="col-6 col-md-3">
+            <b>50+</b>
+            <span>Students taught</span>
+          </div>
+          <div class="col-6 col-md-3">
+            <b>7</b>
+            <span>Courses offered</span>
+          </div>
+          <div class="col-6 col-md-3">
+            <b>&lt; 3 hrs</b>
+            <span>Avg. reply time</span>
+          </div>
+          <div class="col-6 col-md-3">
+            <b>1:1</b>
+            <span>Personalized tutoring</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="stca-footer">
+      <div class="container py-5">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <a href="/index.html" class="footer-brand">
+              <img src="/Images/logo.jpg" height="32" alt="STCA Logo" /> STCA
+            </a>
+            <p class="footer-blurb mt-3">
+              Sol Tutoring &amp; Coding Academy helps students in Addis Ababa
+              and beyond learn to code, master math, and build the digital
+              skills that matter — one student at a time.
+            </p>
+            <div class="footer-socials mt-3">
+              <a href="https://t.me/Sol_Ethio_Coder" target="_blank" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+              <a href="https://www.youtube.com/@stcaAcademy" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+              <a href="mailto:solash5156@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6">
+            <h6 class="footer-heading">Explore</h6>
+            <ul class="footer-links">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/HTML/courses.html">Courses</a></li>
+              <li><a href="/HTML/contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <h6 class="footer-heading">Courses</h6>
+            <ul class="footer-links">
+              <li><a href="/HTML/python-course.html">Python</a></li>
+              <li><a href="/HTML/web-course.html">Web Development</a></li>
+              <li><a href="/HTML/scratch-course.html">Scratch</a></li>
+              <li><a href="/HTML/math-course.html">Math Tutoring</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3">
+            <h6 class="footer-heading">Get in touch</h6>
+            <ul class="footer-links footer-contact">
+              <li><i class="bi bi-telephone-fill"></i> (+251) 901 436 358</li>
+              <li><i class="bi bi-envelope-fill"></i> solash5156@gmail.com</li>
+              <li><i class="bi bi-geo-alt-fill"></i> Addis Ababa, Ethiopia</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 footer-bottom">
+          <p class="mb-0">© 2026 Sol Tutoring &amp; Coding Academy. All rights reserved.</p>
+          <small class="footer-tagline">Practice makes you perfect!</small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Quick Telegram floating pill -->
+    <a href="https://t.me/Sol_Ethio_Coder" target="_blank" class="quick-pill">
+      <span class="quick-dot"></span> Chat on Telegram
+    </a>
+
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    
+    <!-- Three.js node-network 3D hero -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="/JS/node-network.js"></script>
+<script>
+      // Initialize AOS
+      AOS.init({ duration: 1000, once: true });
+
+      // Dark/Light Mode Toggle
+      const toggleBtn = document.getElementById("mode-toggle");
+      const body = document.body;
+
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        toggleBtn.textContent = "☀️ Light";
+      }
+
+      toggleBtn.onclick = () => {
+        body.classList.toggle("dark-mode");
+        toggleBtn.textContent = body.classList.contains("dark-mode")
+          ? "☀️ Light"
+          : "🌙 Dark";
+        localStorage.setItem(
+          "theme",
+          body.classList.contains("dark-mode") ? "dark" : "light",
+        );
+      };
+
+      // Hero Typing Animation
+      const texts = ["Learn Coding", "Practice Academics", "Succeed in Life"];
+      let count = 0,
+        index = 0,
+        currentText = "",
+        letter = "";
+      (function type() {
+        if (count === texts.length) count = 0;
+        currentText = texts[count];
+        letter = currentText.slice(0, ++index);
+        document.getElementById("typed-text").textContent = letter;
+        if (letter.length === currentText.length) {
+          setTimeout(() => {
+            index = 0;
+            count++;
+            type();
+          }, 2000);
+        } else {
+          setTimeout(type, 150);
+        }
+      })();
+    </script>
+  </body>
+</html>

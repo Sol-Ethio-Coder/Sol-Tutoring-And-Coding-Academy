@@ -1,0 +1,1115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>STCA | Contact</title>
+
+    
+    <!-- SEO -->
+    <meta name="description" content="Get in touch with Sol Tutoring & Coding Academy. Message us on Telegram, call directly, or send a quick inquiry — we usually reply within hours." />
+    <link rel="canonical" href="https://solethiocoder.github.io/Sol-Tutoring-And-Coding-Academy/HTML/contact.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Contact STCA | Book a Free Intro Call" />
+    <meta property="og:description" content="Get in touch with Sol Tutoring & Coding Academy. Message us on Telegram, call directly, or send a quick inquiry — we usually reply within hours." />
+    <meta property="og:url" content="https://solethiocoder.github.io/Sol-Tutoring-And-Coding-Academy/HTML/contact.html" />
+    <meta property="og:image" content="https://solethiocoder.github.io/Sol-Tutoring-And-Coding-Academy/Images/logo.jpg" />
+    <meta property="og:site_name" content="Sol Tutoring & Coding Academy" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Contact STCA | Book a Free Intro Call" />
+    <meta name="twitter:description" content="Get in touch with Sol Tutoring & Coding Academy. Message us on Telegram, call directly, or send a quick inquiry — we usually reply within hours." />
+    <meta name="twitter:image" content="https://solethiocoder.github.io/Sol-Tutoring-And-Coding-Academy/Images/logo.jpg" />
+<!-- Favicon -->
+    <link rel="icon" href="/Images/favicon.ico" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Fonts: Sora (display) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/CSS/style.css" />
+
+    <style>
+      :root {
+        --stca-navy: #0b1330;
+        --stca-navy-2: #121b3f;
+        --stca-cyan: #29e3d6;
+        --stca-amber: #ffb703;
+        --stca-ink: #eef1ff;
+      }
+
+      /* Dark Mode (site-wide toggle) */
+      .dark-mode {
+        background-color: #121212 !important;
+        color: #f1f1f1 !important;
+      }
+      .dark-mode .bg-light {
+        background-color: #1e1e1e !important;
+      }
+
+      body {
+        font-family: "Inter", "Segoe UI", sans-serif;
+      }
+
+      h1, h2, h3, h4, .font-display {
+        font-family: "Sora", sans-serif;
+      }
+
+      .mono {
+        font-family: "JetBrains Mono", monospace;
+      }
+
+      section {
+        padding-top: 0;
+        padding-bottom: 3rem;
+      }
+
+      /* ===================================================
+         3D HERO — node network canvas + content overlay
+      =================================================== */
+      .contact-hero {
+        position: relative;
+        background: radial-gradient(120% 140% at 15% 0%, #18225a 0%, var(--stca-navy) 55%, #060a1c 100%);
+        color: var(--stca-ink);
+        overflow: hidden;
+        padding-top: 7.5rem;
+        padding-bottom: 5rem;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+      }
+
+      #contact-3d-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .contact-hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(6,10,28,0.15) 0%, rgba(6,10,28,0.55) 75%, rgba(6,10,28,0.85) 100%);
+        pointer-events: none;
+      }
+
+      .contact-hero .hero-inner {
+        position: relative;
+        z-index: 2;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--stca-cyan);
+        background: rgba(41, 227, 214, 0.08);
+        border: 1px solid rgba(41, 227, 214, 0.35);
+        padding: 0.35rem 0.9rem;
+        border-radius: 50px;
+        margin-bottom: 1.25rem;
+      }
+
+      .eyebrow .dot {
+        width: 7px;
+        height: 7px;
+        background: var(--stca-cyan);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--stca-cyan);
+        animation: pulse-dot 1.6s ease-in-out infinite;
+      }
+
+      @keyframes pulse-dot {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.4; transform: scale(1.4); }
+      }
+
+      .contact-hero h1 {
+        font-size: clamp(2.2rem, 5vw, 3.4rem);
+        font-weight: 800;
+        line-height: 1.08;
+        letter-spacing: -0.01em;
+      }
+
+      .contact-hero h1 .accent {
+        color: var(--stca-cyan);
+      }
+
+      .contact-hero p.lead {
+        color: #c7cdf0;
+        max-width: 36rem;
+        font-size: 1.05rem;
+      }
+
+      .hero-stats {
+        display: flex;
+        gap: 2rem;
+        margin-top: 2.25rem;
+        flex-wrap: wrap;
+      }
+
+      .hero-stats .stat b {
+        font-family: "Sora", sans-serif;
+        font-size: 1.6rem;
+        color: #fff;
+        display: block;
+      }
+
+      .hero-stats .stat span {
+        font-size: 0.8rem;
+        color: #9aa3d6;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      /* ===================================================
+         GLASSMORPHIC CARDS
+      =================================================== */
+      .contact-section {
+        background: #f6f7fb;
+        position: relative;
+        margin-top: -1px;
+      }
+
+      .glass-card {
+        background: #ffffff;
+        border: 1px solid rgba(11, 19, 48, 0.06);
+        border-radius: 20px;
+        box-shadow: 0 20px 45px -20px rgba(11, 19, 48, 0.25);
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .glass-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 28px 55px -18px rgba(11, 19, 48, 0.3);
+      }
+
+      body.dark-mode .glass-card {
+        background: #181f3d;
+        border-color: rgba(255, 255, 255, 0.06);
+        color: #eef1ff;
+      }
+
+      .channel-row {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.85rem 0;
+        border-bottom: 1px dashed rgba(11, 19, 48, 0.12);
+        text-decoration: none;
+        color: inherit;
+      }
+
+      body.dark-mode .channel-row {
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .channel-row:last-child {
+        border-bottom: none;
+      }
+
+      .channel-icon {
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.15rem;
+        background: linear-gradient(135deg, #eef2ff, #e3f8f6);
+        color: var(--stca-navy);
+        transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+      }
+
+      .channel-row:hover .channel-icon {
+        transform: scale(1.12) rotate(-6deg);
+        background: var(--stca-cyan);
+        color: #06122a;
+      }
+
+      .channel-row .channel-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #8a8fae;
+        margin-bottom: 0.1rem;
+      }
+
+      .channel-row .channel-value {
+        font-weight: 600;
+      }
+
+      .map-frame-wrap {
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid rgba(11, 19, 48, 0.08);
+      }
+
+      .map-frame-wrap::before {
+        content: "Addis Ababa, Ethiopia";
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        z-index: 2;
+        background: rgba(6, 10, 28, 0.85);
+        color: #fff;
+        font-size: 0.75rem;
+        font-family: "JetBrains Mono", monospace;
+        padding: 0.3rem 0.7rem;
+        border-radius: 50px;
+        letter-spacing: 0.03em;
+      }
+
+      /* ===================================================
+         FORM
+      =================================================== */
+      .stca-form .form-floating > label {
+        color: #8a8fae;
+      }
+
+      .stca-form .form-control {
+        border-radius: 12px;
+        border: 1.5px solid #e4e6f3;
+        padding: 1rem 1rem;
+        font-size: 0.95rem;
+      }
+
+      .stca-form .form-control:focus {
+        border-color: var(--stca-cyan);
+        box-shadow: 0 0 0 4px rgba(41, 227, 214, 0.15);
+      }
+
+      body.dark-mode .stca-form .form-control {
+        background: #10172f;
+        color: #eef1ff;
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .btn-cyan {
+        background: linear-gradient(135deg, var(--stca-cyan), #1fb9ae);
+        border: none;
+        color: #06122a;
+        font-weight: 700;
+        border-radius: 50px;
+        padding: 0.8rem 2rem;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .btn-cyan:hover {
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: 0 12px 25px -8px rgba(41, 227, 214, 0.55);
+        color: #06122a;
+      }
+
+      .form-success {
+        display: none;
+      }
+
+      .tab-toggle .btn {
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 0.85rem;
+      }
+
+      iframe {
+        border-radius: 15px;
+      }
+
+      /* ===================================================
+         Floating quick-contact pill
+      =================================================== */
+      .quick-pill {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 1050;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        background: var(--stca-navy);
+        color: #fff;
+        padding: 0.7rem 1.1rem;
+        border-radius: 50px;
+        box-shadow: 0 12px 30px -8px rgba(11,19,48,0.5);
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: transform 0.25s ease;
+      }
+      .quick-pill:hover {
+        transform: translateY(-3px);
+        color: #fff;
+      }
+      .quick-pill .quick-dot {
+        width: 8px; height: 8px; border-radius: 50%;
+        background: #25d366;
+        box-shadow: 0 0 8px #25d366;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .eyebrow .dot { animation: none; }
+        #contact-3d-canvas { display: none; }
+      }
+
+      /* ===================================================
+         FOOTER
+      =================================================== */
+      .stca-footer {
+        background: linear-gradient(180deg, var(--stca-navy-2) 0%, #060a1c 100%);
+        color: #c7cdf0;
+        position: relative;
+      }
+
+      .stca-footer::before {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: linear-gradient(90deg, var(--stca-cyan), var(--stca-amber), var(--stca-cyan));
+        opacity: 0.9;
+      }
+
+      .footer-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-family: "Sora", sans-serif;
+        font-weight: 800;
+        font-size: 1.4rem;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .footer-brand img {
+        border-radius: 8px;
+      }
+
+      .footer-blurb {
+        color: #9aa3d6;
+        font-size: 0.92rem;
+        max-width: 26rem;
+        line-height: 1.6;
+      }
+
+      .footer-socials {
+        display: flex;
+        gap: 0.7rem;
+      }
+
+      .footer-socials a {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #cfd4f5;
+        transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+      }
+
+      .footer-socials a:hover {
+        transform: translateY(-3px);
+        background: var(--stca-cyan);
+        color: #06122a;
+      }
+
+      .footer-heading {
+        font-family: "Sora", sans-serif;
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 1.1rem;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.65rem;
+        font-size: 0.92rem;
+      }
+
+      .footer-links a {
+        color: #9aa3d6;
+        text-decoration: none;
+        transition: color 0.25s ease, padding-left 0.25s ease;
+        position: relative;
+      }
+
+      .footer-links a:hover {
+        color: var(--stca-cyan);
+        padding-left: 4px;
+      }
+
+      .footer-contact li {
+        color: #9aa3d6;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      .footer-contact i {
+        color: var(--stca-cyan);
+        width: 1.1rem;
+        text-align: center;
+      }
+
+      .footer-divider {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        margin: 2rem 0 1.25rem;
+        opacity: 1;
+      }
+
+      .footer-bottom {
+        font-size: 0.85rem;
+        color: #7c84b0;
+      }
+
+      .footer-tagline {
+        color: var(--stca-amber);
+        font-family: "JetBrains Mono", monospace;
+      }
+
+      /* ===================================================
+         MOBILE & CROSS-BROWSER COMPATIBILITY FIXES
+      =================================================== */
+      html, body {
+        overflow-x: hidden;
+        max-width: 100%;
+      }
+
+      #contact-3d-canvas {
+        pointer-events: none;
+      }
+
+      p, li, .channel-value, .footer-blurb {
+        overflow-wrap: break-word;
+        word-break: break-word;
+      }
+
+      .quick-pill {
+        bottom: calc(16px + env(safe-area-inset-bottom));
+        right: calc(16px + env(safe-area-inset-right));
+      }
+
+      input, select, textarea {
+        font-size: 16px; /* prevents iOS Safari auto-zoom on focus */
+      }
+
+      @media (max-width: 575.98px) {
+        .quick-pill {
+          padding: 0.6rem 0.9rem;
+          font-size: 0.78rem;
+        }
+
+        .contact-hero {
+          padding-top: 6rem;
+          min-height: auto;
+        }
+
+        .eyebrow {
+          font-size: 0.72rem;
+          white-space: normal;
+          text-align: center;
+        }
+
+        .hero-stats {
+          gap: 1.25rem;
+        }
+
+        .tab-toggle.btn-group {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          gap: 0.5rem;
+        }
+        .tab-toggle.btn-group .btn {
+          width: 100%;
+          border-radius: 50px !important;
+        }
+
+        .map-frame-wrap iframe {
+          height: 200px;
+        }
+
+        .footer-blurb {
+          max-width: 100%;
+        }
+      }
+
+      @media (max-height: 480px) and (orientation: landscape) {
+        .contact-hero {
+          min-height: auto;
+        }
+      }
+
+      @media (hover: none) and (pointer: coarse) {
+        .footer-socials a,
+        .channel-icon {
+          width: 46px;
+          height: 46px;
+        }
+        .btn,
+        .nav-link {
+          min-height: 38px;
+        }
+      }
+
+      /* ===================================================
+         BOOKING SECTION
+      =================================================== */
+      .eyebrow-light {
+        color: var(--stca-navy-2);
+        background: rgba(11, 19, 48, 0.06);
+        border-color: rgba(11, 19, 48, 0.18);
+      }
+
+      .eyebrow-light .dot {
+        background: var(--stca-navy-2);
+        box-shadow: 0 0 10px rgba(11, 19, 48, 0.4);
+      }
+
+      body.dark-mode .eyebrow-light {
+        color: var(--stca-cyan);
+        background: rgba(41, 227, 214, 0.08);
+        border-color: rgba(41, 227, 214, 0.35);
+      }
+
+      body.dark-mode .eyebrow-light .dot {
+        background: var(--stca-cyan);
+        box-shadow: 0 0 10px var(--stca-cyan);
+      }
+
+      body.dark-mode .channel-icon,
+      body.dark-mode .booking-option .booking-icon {
+        background: rgba(41, 227, 214, 0.12);
+        color: var(--stca-cyan);
+      }
+
+      .booking-card {
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 20px 45px -20px rgba(11, 19, 48, 0.25);
+        overflow: hidden;
+      }
+
+      body.dark-mode .booking-card {
+        background: #181f3d;
+      }
+
+      .booking-option {
+        border: 1.5px solid rgba(11, 19, 48, 0.1);
+        border-radius: 16px;
+        padding: 1.5rem;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .booking-option:hover {
+        transform: translateY(-6px);
+        border-color: var(--stca-cyan);
+        box-shadow: 0 18px 35px -16px rgba(41, 227, 214, 0.35);
+      }
+
+      body.dark-mode .booking-option {
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .booking-option .booking-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin: 0 auto 1rem;
+        background: linear-gradient(135deg, #eef2ff, #e3f8f6);
+        color: var(--stca-navy);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="/index.html">
+          <img src="/Images/logo.jpg" height="30" alt="STCA Logo" /> STCA
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+          aria-controls="navmenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/HTML/courses.html">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/HTML/contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <button id="mode-toggle" class="btn btn-outline-warning btn-sm">
+                🌙 Dark
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 3D ANIMATED CONTACT HERO -->
+    <section class="contact-hero">
+      <canvas id="contact-3d-canvas" class="hero-3d-canvas" data-stca-network data-density="70" aria-hidden="true"></canvas>
+
+      <div class="container hero-inner">
+        <div class="row">
+          <div class="col-lg-8">
+            <span class="eyebrow"><span class="dot"></span> Currently online &amp; taking new students</span>
+            <h1 class="animate__animated animate__fadeInDown">
+              Let's connect the <span class="accent">dots</span> —<br />
+              your next lesson starts here.
+            </h1>
+            <p class="lead mt-3 animate__animated animate__fadeInUp">
+              Every node in that network behind you is a student, a tutor, a question
+              answered. Reach out below and we'll plug you in — usually within a few hours.
+            </p>
+
+            <div class="hero-stats">
+              <div class="stat">
+                <b>&lt; 3 hrs</b>
+                <span>Avg. reply time</span>
+              </div>
+              <div class="stat">
+                <b>7</b>
+                <span>Courses offered</span>
+              </div>
+              <div class="stat">
+                <b>1:1</b>
+                <span>Personalized tutoring</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CONTENT -->
+    <section class="contact-section py-5">
+      <div class="container py-4">
+        <div class="row g-4">
+          <!-- CONTACT INFO -->
+          <div class="col-lg-5" data-aos="fade-right">
+            <div class="glass-card p-4 p-md-5 h-100">
+              <h3 class="font-display fw-bold mb-1">Reach out directly</h3>
+              <p class="text-muted mb-4">
+                Pick whichever channel feels easiest — we read all of them.
+              </p>
+
+              <a href="tel:+251901436358" class="channel-row">
+                <span class="channel-icon"><i class="bi bi-telephone-fill"></i></span>
+                <div>
+                  <div class="channel-label">Phone</div>
+                  <div class="channel-value">(+251) 901 436 358</div>
+                </div>
+              </a>
+
+              <a href="mailto:solash5156@gmail.com" class="channel-row">
+                <span class="channel-icon"><i class="bi bi-envelope-fill"></i></span>
+                <div>
+                  <div class="channel-label">Email</div>
+                  <div class="channel-value">solash5156@gmail.com</div>
+                </div>
+              </a>
+
+              <a href="https://t.me/Sol_Ethio_Coder" target="_blank" class="channel-row">
+                <span class="channel-icon"><i class="bi bi-telegram"></i></span>
+                <div>
+                  <div class="channel-label">Telegram</div>
+                  <div class="channel-value">@Sol_Ethio_Coder</div>
+                </div>
+              </a>
+
+              <a href="https://www.youtube.com/@stcaAcademy" target="_blank" class="channel-row">
+                <span class="channel-icon"><i class="bi bi-youtube"></i></span>
+                <div>
+                  <div class="channel-label">YouTube</div>
+                  <div class="channel-value">@stcaAcademy</div>
+                </div>
+              </a>
+
+              <div class="channel-row" style="border-bottom: none;">
+                <span class="channel-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                <div>
+                  <div class="channel-label">Location</div>
+                  <div class="channel-value">Addis Ababa, Ethiopia</div>
+                </div>
+              </div>
+
+              <!-- GOOGLE MAP -->
+              <div class="mt-3 map-frame-wrap">
+                <iframe
+                  src="https://www.google.com/maps?q=Addis%20Ababa%2C%20Ethiopia&output=embed"
+                  width="100%"
+                  height="240"
+                  style="border: 0; display: block;"
+                  allowfullscreen=""
+                  loading="lazy"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORM / GOOGLE FORM TOGGLE -->
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="glass-card p-4 p-md-5 h-100">
+              <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+                <h3 class="font-display fw-bold mb-0">Send a message</h3>
+                <div class="tab-toggle btn-group" role="group">
+                  <button type="button" class="btn btn-dark active" id="tab-quick">Quick form</button>
+                  <button type="button" class="btn btn-outline-dark" id="tab-google">Registration form</button>
+                </div>
+              </div>
+
+              <!-- QUICK CONTACT FORM (opens mail client with prefilled message) -->
+              <form class="stca-form" id="quick-contact-form" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="name" placeholder="Your name" required />
+                      <label for="name">Your name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="email" class="form-control" id="email" placeholder="you@example.com" required />
+                      <label for="email">Email address</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <select class="form-select" id="course-interest">
+                        <option selected value="">Not sure yet</option>
+                        <option>Python</option>
+                        <option>Web Development</option>
+                        <option>Scratch</option>
+                        <option>Math Tutoring</option>
+                        <option>Digital Literacy</option>
+                        <option>Exam Prep</option>
+                      </select>
+                      <label for="course-interest">Course of interest</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="tel" class="form-control" id="phone" placeholder="Phone (optional)" />
+                      <label for="phone">Phone (optional)</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <textarea class="form-control" id="message" style="height: 140px" placeholder="Your message" required></textarea>
+                      <label for="message">Tell us what you'd like to learn</label>
+                    </div>
+                  </div>
+                  <div class="col-12 d-flex align-items-center justify-content-between flex-wrap gap-3">
+                    <small class="text-muted mono">We typically reply within a few hours.</small>
+                    <button type="submit" class="btn btn-cyan">
+                      Send message <i class="bi bi-send-fill ms-1"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="form-success alert alert-success mt-3 d-flex align-items-center gap-2" role="alert">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Opening your email app with this message ready to send — thanks, talk soon!</span>
+                </div>
+              </form>
+
+              <!-- GOOGLE FORM (linked, not iframed — forms.gle short links and
+                   Google's frame restrictions make iframe embeds unreliable
+                   across browsers, so we open it in a new tab instead) -->
+              <div id="google-form-wrap" style="display:none;">
+                <div class="text-center py-5 px-3">
+                  <div class="booking-icon mx-auto mb-3">
+                    <i class="bi bi-clipboard2-check-fill"></i>
+                  </div>
+                  <h5 class="fw-bold">Open the registration form</h5>
+                  <p class="text-muted mb-4" style="max-width: 28rem; margin-inline: auto;">
+                    This opens our official registration form in a new tab —
+                    Google Forms doesn't reliably embed inline across every
+                    browser, so we keep it as its own page for you.
+                  </p>
+                  <a
+                    href="https://forms.gle/Jcjdv4ZBiXeSnDo87"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-cyan"
+                  >
+                    Open registration form <i class="bi bi-box-arrow-up-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="contact-section pb-5">
+      <div class="container">
+        <div class="booking-card p-4 p-md-5" data-aos="fade-up">
+          <div class="text-center mb-4">
+            <span class="eyebrow eyebrow-light"><span class="dot"></span> Prefer to talk first?</span>
+            <h3 class="font-display fw-bold mt-2">Book a free 15-minute intro call</h3>
+            <p class="text-muted mb-0">
+              No commitment — we'll figure out the right course and schedule together.
+            </p>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="booking-option">
+                <div class="booking-icon"><i class="bi bi-telegram"></i></div>
+                <h6 class="fw-bold">Message on Telegram</h6>
+                <p class="text-muted small mb-3">Fastest way to reach us — usually replies within hours.</p>
+                <a href="https://t.me/Sol_Ethio_Coder" target="_blank" class="btn btn-cyan btn-sm w-100">Chat now</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="booking-option">
+                <div class="booking-icon"><i class="bi bi-telephone-fill"></i></div>
+                <h6 class="fw-bold">Call directly</h6>
+                <p class="text-muted small mb-3">Prefer talking? Give us a call during the day.</p>
+                <a href="tel:+251901436358" class="btn btn-cyan btn-sm w-100">(+251) 901 436 358</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="booking-option">
+                <div class="booking-icon"><i class="bi bi-calendar-check-fill"></i></div>
+                <h6 class="fw-bold">Pick a time slot</h6>
+                <p class="text-muted small mb-3">Tell us your availability and we'll confirm a slot by email.</p>
+                <a href="mailto:solash5156@gmail.com?subject=Intro%20call%20request&body=Hi%20STCA%2C%20I%27d%20like%20to%20book%20a%20free%20intro%20call.%20My%20availability%20is%3A%20" class="btn btn-cyan btn-sm w-100">Request by email</a>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-center text-muted mt-4 mb-0 mono" style="font-size: 0.8rem;">
+            Running a scheduling tool like Calendly or Cal.com? Swap this section for an embed any time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="stca-footer">
+      <div class="container py-5">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <a href="/index.html" class="footer-brand">
+              <img src="/Images/logo.jpg" height="32" alt="STCA Logo" /> STCA
+            </a>
+            <p class="footer-blurb mt-3">
+              Sol Tutoring &amp; Coding Academy helps students in Addis Ababa
+              and beyond learn to code, master math, and build the digital
+              skills that matter — one student at a time.
+            </p>
+            <div class="footer-socials mt-3">
+              <a href="https://t.me/Sol_Ethio_Coder" target="_blank" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+              <a href="https://www.youtube.com/@stcaAcademy" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+              <a href="mailto:solash5156@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6">
+            <h6 class="footer-heading">Explore</h6>
+            <ul class="footer-links">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/HTML/courses.html">Courses</a></li>
+              <li><a href="/HTML/contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <h6 class="footer-heading">Courses</h6>
+            <ul class="footer-links">
+              <li><a href="/HTML/python-course.html">Python</a></li>
+              <li><a href="/HTML/web-course.html">Web Development</a></li>
+              <li><a href="/HTML/scratch-course.html">Scratch</a></li>
+              <li><a href="/HTML/math-course.html">Math Tutoring</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3">
+            <h6 class="footer-heading">Get in touch</h6>
+            <ul class="footer-links footer-contact">
+              <li><i class="bi bi-telephone-fill"></i> (+251) 901 436 358</li>
+              <li><i class="bi bi-envelope-fill"></i> solash5156@gmail.com</li>
+              <li><i class="bi bi-geo-alt-fill"></i> Addis Ababa, Ethiopia</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 footer-bottom">
+          <p class="mb-0">© 2026 Sol Tutoring &amp; Coding Academy. All rights reserved.</p>
+          <small class="footer-tagline">Practice makes you perfect! 💡</small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Quick Telegram floating pill -->
+    <a href="https://t.me/Sol_Ethio_Coder" target="_blank" class="quick-pill">
+      <span class="quick-dot"></span> Chat on Telegram
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Three.js for the 3D animated node network -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="/JS/node-network.js"></script>
+
+    <script>
+      // Initialize AOS
+      AOS.init({ duration: 1000, once: true });
+
+      // Dark / Light mode
+      const toggleBtn = document.getElementById("mode-toggle");
+      const body = document.body;
+
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        toggleBtn.textContent = "☀️ Light";
+      }
+
+      toggleBtn.onclick = () => {
+        body.classList.toggle("dark-mode");
+        toggleBtn.textContent = body.classList.contains("dark-mode")
+          ? "☀️ Light"
+          : "🌙 Dark";
+        localStorage.setItem(
+          "theme",
+          body.classList.contains("dark-mode") ? "dark" : "light",
+        );
+      };
+
+      // Form tab toggle
+      const tabQuick = document.getElementById("tab-quick");
+      const tabGoogle = document.getElementById("tab-google");
+      const quickForm = document.getElementById("quick-contact-form");
+      const googleWrap = document.getElementById("google-form-wrap");
+
+      tabQuick.addEventListener("click", () => {
+        tabQuick.classList.add("btn-dark", "active");
+        tabQuick.classList.remove("btn-outline-dark");
+        tabGoogle.classList.add("btn-outline-dark");
+        tabGoogle.classList.remove("btn-dark", "active");
+        quickForm.style.display = "block";
+        googleWrap.style.display = "none";
+      });
+
+      tabGoogle.addEventListener("click", () => {
+        tabGoogle.classList.add("btn-dark", "active");
+        tabGoogle.classList.remove("btn-outline-dark");
+        tabQuick.classList.add("btn-outline-dark");
+        tabQuick.classList.remove("btn-dark", "active");
+        quickForm.style.display = "none";
+        googleWrap.style.display = "block";
+      });
+
+      // Quick contact form -> opens mailto with prefilled content
+      document.getElementById("quick-contact-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const course = document.getElementById("course-interest").value;
+        const phone = document.getElementById("phone").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !message) {
+          this.classList.add("was-validated");
+          return;
+        }
+
+        const subject = encodeURIComponent("STCA Inquiry from " + name);
+        const body = encodeURIComponent(
+          `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "N/A"}\nCourse interest: ${course || "N/A"}\n\nMessage:\n${message}`
+        );
+        window.location.href = `mailto:solash5156@gmail.com?subject=${subject}&body=${body}`;
+
+        document.querySelector(".form-success").style.display = "flex";
+      });
+
+      // 3D animated hero is handled by the shared, mobile-hardened
+      // /JS/node-network.js (loaded below) via [data-stca-network].
+    </script>
+  </body>
+</html>

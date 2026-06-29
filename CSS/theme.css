@@ -1,0 +1,763 @@
+/* =========================================================
+   STCA SITE THEME — shared design language (matches contact.html)
+   Tokens, navbar, buttons, hero, cards, footer, hover/motion FX
+========================================================= */
+
+:root {
+  --stca-navy: #0b1330;
+  --stca-navy-2: #121b3f;
+  --stca-cyan: #29e3d6;
+  --stca-amber: #ffb703;
+  --stca-ink: #eef1ff;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand, .font-display {
+  font-family: "Sora", sans-serif;
+}
+
+.mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+nav.navbar.bg-dark {
+  background: linear-gradient(90deg, var(--stca-navy), var(--stca-navy-2)) !important;
+}
+
+.navbar .nav-link {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--stca-cyan) !important;
+}
+
+.navbar .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: -2px;
+  height: 2px;
+  background: var(--stca-cyan);
+  border-radius: 2px;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+.btn-warning {
+  background: linear-gradient(135deg, var(--stca-cyan), #1fb9ae) !important;
+  border: none !important;
+  color: #06122a !important;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-warning:hover,
+.btn-warning:focus {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 14px 28px -10px rgba(41, 227, 214, 0.55);
+  color: #06122a !important;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, var(--stca-amber), #f08c00) !important;
+  border: none !important;
+  color: #1a1100 !important;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-success:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 14px 28px -10px rgba(255, 183, 3, 0.55);
+  color: #1a1100 !important;
+}
+
+.btn-outline-warning {
+  color: var(--stca-amber) !important;
+  border-color: var(--stca-amber) !important;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-warning:hover {
+  background-color: var(--stca-amber) !important;
+  color: #1a1100 !important;
+  transform: translateY(-2px);
+}
+
+.text-warning {
+  color: var(--stca-cyan) !important;
+}
+
+.text-primary {
+  color: var(--stca-navy-2) !important;
+}
+
+body.dark-mode .text-primary {
+  color: var(--stca-cyan) !important;
+}
+
+/* =========================================================
+   HERO SECTIONS (any section.bg-dark becomes the night-sky gradient)
+========================================================= */
+section.bg-dark {
+  background: radial-gradient(120% 140% at 15% 0%, #18225a 0%, var(--stca-navy) 55%, #060a1c 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+section.bg-dark .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-3d-canvas {
+  position: absolute;
+  top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+}
+
+section.bg-dark::after {
+  content: "";
+  position: absolute;
+  top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(6, 10, 28, 0.1) 0%, rgba(6, 10, 28, 0.55) 80%, rgba(6, 10, 28, 0.85) 100%);
+  pointer-events: none;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--stca-cyan);
+  background: rgba(41, 227, 214, 0.08);
+  border: 1px solid rgba(41, 227, 214, 0.35);
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  margin-bottom: 1.1rem;
+}
+
+.eyebrow .dot {
+  width: 7px;
+  height: 7px;
+  background: var(--stca-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--stca-cyan);
+  animation: stca-pulse-dot 1.6s ease-in-out infinite;
+}
+
+@keyframes stca-pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.4); }
+}
+
+section.bg-dark .lead {
+  color: #c7cdf0;
+}
+
+/* =========================================================
+   CARDS — feature / course / generic, consistent hover language
+========================================================= */
+.card,
+.feature-card,
+.course-card {
+  border-radius: 18px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover,
+.feature-card:hover,
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px -18px rgba(41, 227, 214, 0.35) !important;
+}
+
+.feature-card i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.feature-card:hover i {
+  transform: rotate(-8deg) scale(1.18);
+  color: var(--stca-cyan) !important;
+}
+
+.course-card img {
+  transition: transform 0.4s ease;
+}
+
+.course-card:hover img {
+  transform: scale(1.08);
+}
+
+body.dark-mode .card {
+  background-color: #181f3d !important;
+  color: #eef1ff !important;
+}
+
+/* =========================================================
+   FOOTER — shared across every page
+========================================================= */
+.stca-footer {
+  background: linear-gradient(180deg, var(--stca-navy-2) 0%, #060a1c 100%);
+  color: #c7cdf0;
+  position: relative;
+}
+
+.stca-footer::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--stca-cyan), var(--stca-amber), var(--stca-cyan));
+  opacity: 0.9;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: "Sora", sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-brand img {
+  border-radius: 8px;
+}
+
+.footer-blurb {
+  color: #9aa3d6;
+  font-size: 0.92rem;
+  max-width: 26rem;
+  line-height: 1.6;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.footer-socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cfd4f5;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-3px);
+  background: var(--stca-cyan);
+  color: #06122a;
+}
+
+.footer-heading {
+  font-family: "Sora", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+}
+
+.footer-links a {
+  color: #9aa3d6;
+  text-decoration: none;
+  transition: color 0.25s ease, padding-left 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: var(--stca-cyan);
+  padding-left: 4px;
+}
+
+.footer-contact li {
+  color: #9aa3d6;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer-contact i {
+  color: var(--stca-cyan);
+  width: 1.1rem;
+  text-align: center;
+}
+
+.footer-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 2rem 0 1.25rem;
+  opacity: 1;
+}
+
+.footer-bottom {
+  font-size: 0.85rem;
+  color: #7c84b0;
+}
+
+.footer-tagline {
+  color: var(--stca-amber);
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* =========================================================
+   FLOATING QUICK-CONTACT PILL
+========================================================= */
+.quick-pill {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--stca-navy);
+  color: #fff;
+  padding: 0.7rem 1.1rem;
+  border-radius: 50px;
+  box-shadow: 0 12px 30px -8px rgba(11, 19, 48, 0.5);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: transform 0.25s ease;
+}
+
+.quick-pill:hover {
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+.quick-pill .quick-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 0 8px #25d366;
+}
+
+/* =========================================================
+   LIST GROUP ITEMS — small hover lift used on course pages
+========================================================= */
+.list-group-item {
+  transition: transform 0.25s ease, background 0.25s ease;
+  border: none;
+  background: transparent;
+}
+
+.list-group-item:hover {
+  transform: translateX(6px);
+  color: var(--stca-navy-2);
+}
+
+body.dark-mode .list-group-item {
+  color: #eef1ff;
+}
+
+body.dark-mode .list-group-item:hover {
+  color: var(--stca-cyan);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eyebrow .dot { animation: none; }
+  .hero-3d-canvas { display: none; }
+}
+
+/* =========================================================
+   MOBILE & CROSS-BROWSER COMPATIBILITY FIXES
+========================================================= */
+
+/* Prevent any stray horizontal scroll caused by absolutely
+   positioned canvases, wide flex rows, or long unbreakable text */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* The 3D canvas should never intercept taps/clicks — it's pure decoration */
+.hero-3d-canvas {
+  pointer-events: none;
+}
+
+/* Long words (emails, URLs) shouldn't force horizontal scroll on narrow screens */
+p, li, .channel-value, .footer-blurb {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Respect iOS notches / home-indicator safe areas */
+.quick-pill {
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  right: calc(16px + env(safe-area-inset-right));
+}
+
+@media (max-width: 575.98px) {
+  /* Shrink the floating pill so it doesn't cover form fields or
+     footer links on small screens, but keep it tappable and clear */
+  .quick-pill {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.78rem;
+  }
+
+  /* Hero sections generally need less vertical padding on phones */
+  section.bg-dark {
+    padding-top: 6rem;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* Button-group tabs (e.g. "Quick form" / "Registration form")
+     stack instead of overflowing the card on narrow viewports */
+  .tab-toggle.btn-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  .tab-toggle.btn-group .btn {
+    width: 100%;
+    border-radius: 50px !important;
+  }
+
+  /* Tall embedded iframes (Google Form / Map) get shorter on phones
+     so the page doesn't turn into one giant scroll well */
+  .map-frame-wrap iframe {
+    height: 200px;
+  }
+
+  /* Footer columns get a bit tighter on very small screens */
+  .footer-blurb {
+    max-width: 100%;
+  }
+}
+
+/* Landscape phones / short viewports: don't let a min-height hero
+   push the fold content too far down */
+@media (max-height: 480px) and (orientation: landscape) {
+  .contact-hero,
+  section.bg-dark {
+    min-height: auto;
+  }
+}
+
+/* Larger tap targets on touch devices for small interactive elements */
+@media (hover: none) and (pointer: coarse) {
+  .footer-socials a,
+  .channel-icon {
+    width: 46px;
+    height: 46px;
+  }
+  .btn,
+  .nav-link {
+    min-height: 38px;
+  }
+}
+
+/* Avoid Safari iOS zoom-on-focus by ensuring inputs are >=16px */
+input, select, textarea {
+  font-size: 16px;
+}
+
+/* =========================================================
+   TESTIMONIALS
+========================================================= */
+.testimonials-section {
+  background: #f6f7fb;
+}
+
+body.dark-mode .testimonials-section {
+  background: #15192f;
+}
+
+.eyebrow-light {
+  color: var(--stca-navy-2);
+  background: rgba(11, 19, 48, 0.06);
+  border-color: rgba(11, 19, 48, 0.18);
+}
+
+.eyebrow-light .dot {
+  background: var(--stca-navy-2);
+  box-shadow: 0 0 10px rgba(11, 19, 48, 0.4);
+}
+
+body.dark-mode .eyebrow-light {
+  color: var(--stca-cyan);
+  background: rgba(41, 227, 214, 0.08);
+  border-color: rgba(41, 227, 214, 0.35);
+}
+
+body.dark-mode .eyebrow-light .dot {
+  background: var(--stca-cyan);
+  box-shadow: 0 0 10px var(--stca-cyan);
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.75rem;
+  box-shadow: 0 18px 40px -20px rgba(11, 19, 48, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -16px rgba(41, 227, 214, 0.3);
+}
+
+body.dark-mode .testimonial-card {
+  background: #181f3d;
+  color: #eef1ff;
+}
+
+.testimonial-card .stars {
+  color: var(--stca-amber);
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+}
+
+.testimonial-quote {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  color: inherit;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.avatar-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--stca-cyan), var(--stca-amber));
+  color: #06122a;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.author-name {
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.author-role {
+  font-size: 0.78rem;
+  color: #8a8fae;
+}
+
+.stat-strip b {
+  display: block;
+  font-family: "Sora", sans-serif;
+  font-size: 1.6rem;
+  color: var(--stca-navy-2);
+}
+
+body.dark-mode .stat-strip b {
+  color: var(--stca-cyan);
+}
+
+.stat-strip span {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #8a8fae;
+}
+
+.stat-strip {
+  margin-top: 1.5rem;
+}
+
+/* =========================================================
+   PRICING TABLE
+========================================================= */
+.pricing-section {
+  background: #f6f7fb;
+}
+
+body.dark-mode .pricing-section {
+  background: #15192f;
+}
+
+.pricing-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.75rem;
+  height: 100%;
+  box-shadow: 0 18px 40px -20px rgba(11, 19, 48, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -16px rgba(41, 227, 214, 0.3);
+}
+
+.pricing-card.featured {
+  border-color: var(--stca-cyan);
+}
+
+.pricing-card .badge-popular {
+  position: absolute;
+  top: -12px;
+  right: 1.25rem;
+  background: linear-gradient(135deg, var(--stca-cyan), #1fb9ae);
+  color: #06122a;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+}
+
+body.dark-mode .pricing-card {
+  background: #181f3d;
+  color: #eef1ff;
+}
+
+.pricing-card .price {
+  font-family: "Sora", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--stca-navy-2);
+}
+
+body.dark-mode .pricing-card .price {
+  color: var(--stca-cyan);
+}
+
+.pricing-card .price span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #8a8fae;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+}
+
+.pricing-card ul li {
+  padding: 0.4rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pricing-card ul li i {
+  color: var(--stca-cyan);
+}
+
+/* =========================================================
+   BOOKING SECTION
+========================================================= */
+.booking-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px -20px rgba(11, 19, 48, 0.25);
+  overflow: hidden;
+}
+
+body.dark-mode .booking-card {
+  background: #181f3d;
+}
+
+.booking-option {
+  border: 1.5px solid rgba(11, 19, 48, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-option:hover {
+  transform: translateY(-6px);
+  border-color: var(--stca-cyan);
+  box-shadow: 0 18px 35px -16px rgba(41, 227, 214, 0.35);
+}
+
+body.dark-mode .booking-option {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.booking-option .booking-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, #eef2ff, #e3f8f6);
+  color: var(--stca-navy);
+}
+
+body.dark-mode .booking-option .booking-icon {
+  background: rgba(41, 227, 214, 0.12);
+  color: var(--stca-cyan);
+}

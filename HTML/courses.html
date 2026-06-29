@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>STCA | Courses</title>
+
+    
+    <!-- SEO -->
+    <meta name="description" content="Explore STCA's courses — Python, Web Development, Scratch, Math Tutoring, Digital Literacy and Exam Prep — with simple hourly pricing." />
+    <link rel="canonical" href="https://solethiocoder.github.io/Sol-Tutoring-And-Coding-Academy/HTML/courses.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Courses & Pricing | STCA" />
+    <meta property="og:description" content="Explore STCA's courses — Python, Web Development, Scratch, Math Tutoring, Digital Literacy and Exam Prep — with simple hourly pricing." />
+    <meta property="og:url" content="https://solethiocoder.github.io/Sol-Tutoring-And-Coding-Academy/HTML/courses.html" />
+    <meta property="og:image" content="https://solethiocoder.github.io/Sol-Tutoring-And-Coding-Academy/Images/logo.jpg" />
+    <meta property="og:site_name" content="Sol Tutoring & Coding Academy" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Courses & Pricing | STCA" />
+    <meta name="twitter:description" content="Explore STCA's courses — Python, Web Development, Scratch, Math Tutoring, Digital Literacy and Exam Prep — with simple hourly pricing." />
+    <meta name="twitter:image" content="https://solethiocoder.github.io/Sol-Tutoring-And-Coding-Academy/Images/logo.jpg" />
+<!-- Favicon -->
+    <link rel="icon" href="/Images/favicon.ico" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts: Sora + Inter + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STCA shared theme -->
+    <link rel="stylesheet" href="/CSS/theme.css" />
+<!-- Custom CSS -->
+    <link rel="stylesheet" href="/CSS/style.css" />
+
+    <style>
+      .dark-mode {
+        background-color: #121212 !important;
+        color: #f1f1f1 !important;
+      }
+      .dark-mode .bg-light {
+        background-color: #1e1e1e !important;
+      }
+      .course-card {
+        border-radius: 15px;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+      }
+      .course-card:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
+      }
+      .course-card img {
+        transition: transform 0.3s;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+      .course-card:hover img {
+        transform: scale(1.05);
+      }
+      .card-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .card-body p {
+        flex-grow: 1;
+      }
+      section {
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="/index.html"
+          ><img src="/Images/logo.jpg" alt="STCA Logo" height="30" /> STCA</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+          aria-controls="navmenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/HTML/courses.html">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/HTML/contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <button id="mode-toggle" class="btn btn-outline-warning btn-sm">
+                🌙 Dark
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="bg-dark text-light text-center">
+      <canvas class="hero-3d-canvas" data-stca-network data-density="50"></canvas>
+<div class="container py-5" data-aos="fade-down">
+        <h1 class="display-5 animate__animated animate__fadeInDown">
+          Our Courses
+        </h1>
+        <p class="lead animate__animated animate__fadeInUp">
+          Choose from our variety of academic and coding courses.
+        </p>
+      </div>
+    </section>
+
+    <!-- COURSES GRID -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Web Development -->
+          <div class="col-md-4" data-aos="fade-up">
+           <div class="card course-card h-100 shadow">
+
+              <img
+                src="/Images/ict.avif"
+                alt="Web Development"
+                class="card-img-top"
+              />
+              <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title fw-bold">Web Development</h5>
+                <p class="card-text">
+                  HTML, CSS, JavaScript, and mini projects.
+                </p>
+                <a href="/HTML/web-course.html" class="btn btn-warning mt-3"
+                  >View Course</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Mathematics -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card course-card h-100 shadow">
+              <img
+                src="/Images/maths.jpg"
+                alt="Mathematics"
+                class="card-img-top"
+              />
+              <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title fw-bold">Mathematics</h5>
+                <p class="card-text">
+                  From basic to advanced levels for all grades.
+                </p>
+                <a href="/HTML/math-course.html" class="btn btn-warning mt-3"
+                  >View Course</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Python -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+           <div class="card course-card h-100 shadow">
+              <img
+                src="/Images/python.avif"
+                alt="Python Programming"
+                class="card-img-top"
+              />
+              <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title fw-bold">Python Programming</h5>
+                <p class="card-text">
+                  Python basics, loops, functions, mini-projects.
+                </p>
+                <a href="/HTML/python-course.html" class="btn btn-warning mt-3"
+                  >View Course</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Scratch -->
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="card course-card h-100 shadow">
+              <img
+                src="/Images/scratch.jpg"
+                alt="Scratch"
+                class="card-img-top"
+              />
+              <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title fw-bold">Scratch Programming</h5>
+                <p class="card-text">
+                  Creative coding, animations, mini-games, and projects.
+                </p>
+                <a href="/HTML/scratch-course.html" class="btn btn-warning mt-3"
+                  >View Course</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Digital Literacy -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+           <div class="card course-card h-100 shadow">
+              <img
+                src="/Images/digital-literacy.avif"
+                alt="Digital Literacy"
+                class="card-img-top"
+              />
+              <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title fw-bold">Digital Literacy</h5>
+                <p class="card-text">
+                  Computer basics, MS Office, Internet & productivity tools.
+                </p>
+                <a href="/HTML/digital-course.html" class="btn btn-warning mt-3"
+                  >View Course</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Exam Prep -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card course-card h-100 shadow">
+              <img
+                src="/Images/exam.jpg"
+                alt="Exam Preparation"
+                class="card-img-top"
+              />
+              <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title fw-bold">Exam Preparation</h5>
+                <p class="card-text">
+                  National exam preparation for Grade 6, 8, 12 with solutions.
+                </p>
+                <a href="/HTML/exam-course.html" class="btn btn-warning mt-3"
+                  >View Course</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="py-5 pricing-section">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="eyebrow eyebrow-light"><span class="dot"></span> Simple, hourly pricing</span>
+          <h2 class="font-display fw-bold mt-2">No hidden fees, no packages to decode</h2>
+          <p class="text-muted">Pay per hour, switch courses anytime. Prices in Ethiopian Birr.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+            <div class="pricing-card h-100">
+              <h5 class="fw-bold">Scratch &amp; Python</h5>
+              <div class="price mt-2">500 <span>Birr / hr</span></div>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> 1:1 personalized sessions</li>
+                <li><i class="bi bi-check-circle-fill"></i> Hands-on mini projects</li>
+                <li><i class="bi bi-check-circle-fill"></i> Flexible scheduling</li>
+              </ul>
+              <a href="/HTML/contact.html" class="btn btn-warning w-100">Get Started</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing-card featured h-100">
+              <span class="badge-popular">Most popular</span>
+              <h5 class="fw-bold">Web Development</h5>
+              <div class="price mt-2">600 <span>Birr / hr</span></div>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> HTML, CSS &amp; JavaScript</li>
+                <li><i class="bi bi-check-circle-fill"></i> Real portfolio projects</li>
+                <li><i class="bi bi-check-circle-fill"></i> Career-focused curriculum</li>
+              </ul>
+              <a href="/HTML/contact.html" class="btn btn-warning w-100">Get Started</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing-card h-100">
+              <h5 class="fw-bold">Math Tutoring</h5>
+              <div class="price mt-2">600 <span>Birr / hr</span></div>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> Grade 5–12 curriculum</li>
+                <li><i class="bi bi-check-circle-fill"></i> Algebra to Calculus</li>
+                <li><i class="bi bi-check-circle-fill"></i> Exam-focused practice</li>
+              </ul>
+              <a href="/HTML/contact.html" class="btn btn-warning w-100">Get Started</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="pricing-card h-100">
+              <h5 class="fw-bold">Digital Literacy &amp; Exam Prep</h5>
+              <div class="price mt-2">500-600 <span>Birr / hr</span></div>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> Computer &amp; internet basics</li>
+                <li><i class="bi bi-check-circle-fill"></i> National exam strategies</li>
+                <li><i class="bi bi-check-circle-fill"></i> Past papers &amp; mock tests</li>
+              </ul>
+              <a href="/HTML/contact.html" class="btn btn-warning w-100">Get Started</a>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center text-muted mt-4 mb-0 mono" style="font-size: 0.85rem;">
+          Not sure which course fits? <a href="/HTML/contact.html">Message us</a> and we'll help you choose.
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="stca-footer">
+      <div class="container py-5">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <a href="/index.html" class="footer-brand">
+              <img src="/Images/logo.jpg" height="32" alt="STCA Logo" /> STCA
+            </a>
+            <p class="footer-blurb mt-3">
+              Sol Tutoring &amp; Coding Academy helps students in Addis Ababa
+              and beyond learn to code, master math, and build the digital
+              skills that matter — one student at a time.
+            </p>
+            <div class="footer-socials mt-3">
+              <a href="https://t.me/Sol_Ethio_Coder" target="_blank" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+              <a href="https://www.youtube.com/@stcaAcademy" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+              <a href="mailto:solash5156@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6">
+            <h6 class="footer-heading">Explore</h6>
+            <ul class="footer-links">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/HTML/courses.html">Courses</a></li>
+              <li><a href="/HTML/contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <h6 class="footer-heading">Courses</h6>
+            <ul class="footer-links">
+              <li><a href="/HTML/python-course.html">Python</a></li>
+              <li><a href="/HTML/web-course.html">Web Development</a></li>
+              <li><a href="/HTML/scratch-course.html">Scratch</a></li>
+              <li><a href="/HTML/math-course.html">Math Tutoring</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3">
+            <h6 class="footer-heading">Get in touch</h6>
+            <ul class="footer-links footer-contact">
+              <li><i class="bi bi-telephone-fill"></i> (+251) 901 436 358</li>
+              <li><i class="bi bi-envelope-fill"></i> solash5156@gmail.com</li>
+              <li><i class="bi bi-geo-alt-fill"></i> Addis Ababa, Ethiopia</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 footer-bottom">
+          <p class="mb-0">© 2026 Sol Tutoring &amp; Coding Academy. All rights reserved.</p>
+          <small class="footer-tagline">Practice makes you perfect!</small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Quick Telegram floating pill -->
+    <a href="https://t.me/Sol_Ethio_Coder" target="_blank" class="quick-pill">
+      <span class="quick-dot"></span> Chat on Telegram
+    </a>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Three.js node-network 3D hero -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="/JS/node-network.js"></script>
+<script>
+      AOS.init({ duration: 1000, once: true });
+
+      const toggleBtn = document.getElementById("mode-toggle");
+      const body = document.body;
+
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        toggleBtn.textContent = "☀️ Light";
+      }
+
+      toggleBtn.onclick = () => {
+        body.classList.toggle("dark-mode");
+        toggleBtn.textContent = body.classList.contains("dark-mode")
+          ? "☀️ Light"
+          : "🌙 Dark";
+        localStorage.setItem(
+          "theme",
+          body.classList.contains("dark-mode") ? "dark" : "light",
+        );
+      };
+    </script>
+  </body>
+</html>

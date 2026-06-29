@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://solethiocoder.github.io/Sol-Tutoring-And-Coding-Academy/sitemap.xml

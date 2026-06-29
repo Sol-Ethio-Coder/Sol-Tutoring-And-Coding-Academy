@@ -1,0 +1,256 @@
+/* =========================
+Global Styles
+========================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    scroll-behavior: smooth;
+    transition: background 0.5s, color 0.5s;
+}
+
+.dark-mode {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* =========================
+Navbar
+========================= */
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* =========================
+Hero Section
+========================= */
+section.bg-primary {
+    background-color: #0d6efd !important;
+}
+
+/* =========================
+Cards
+========================= */
+.card {
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* =========================
+Buttons
+========================= */
+.btn-primary, .btn-warning, .btn-success, .btn-light {
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover, .btn-warning:hover, .btn-success:hover, .btn-light:hover {
+    transform: scale(1.1);
+}
+
+/* =========================
+Form
+========================= */
+input, textarea {
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 10px #0d6efd;
+    border-color: #0d6efd;
+    outline: none;
+}
+
+/* =========================
+Footer
+========================= */
+footer {
+    font-size: 0.9rem;
+}
+
+.news-input input {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.news-input button {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/* =========================
+Misc
+========================= */
+img {
+    max-width: 100%;
+}
+
+.ratio iframe {
+    border-radius: 15px;
+}
+
+/* =========================
+Accordion
+========================= */
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: #0d6efd;
+}
+
+.floating-img {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+.hover-card:hover {
+  transform: translateY(-10px);
+  transition: 0.3s;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.course-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Feature Card Styles */
+.feature-card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+}
+
+.feature-card i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.feature-card:hover i {
+  transform: rotate(-10deg) scale(1.2);
+  color: #ffc107;
+}
+
+.feature-card h4 {
+  transition: color 0.3s ease;
+}
+
+.feature-card:hover h4 {
+  color: #ff9800;
+}
+
+/* Courses Card */
+.course-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.course-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+}
+
+.course-card img {
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover img {
+  transform: scale(1.1);
+}
+
+/* ===== DARK MODE FIX FOR ALL MODALS ===== */
+body.dark-mode .modal-content {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+  border-radius: 15px;
+}
+
+/* Modal header */
+body.dark-mode .modal-header {
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .modal-title {
+  color: #ffc107 !important;
+  font-weight: 700;
+}
+
+/* Modal body text */
+body.dark-mode .modal-body,
+body.dark-mode .modal-body p,
+body.dark-mode .modal-body li {
+  color: #eaeaea !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Modal footer */
+body.dark-mode .modal-footer {
+  border-top: 1px solid #333;
+}
+
+/* Buttons */
+body.dark-mode .modal-footer .btn {
+  opacity: 1 !important;
+}
+
+/* Close button visibility */
+body.dark-mode .btn-close {
+  filter: invert(1);
+}
+
+.modal-body li {
+  transition: transform 0.3s ease;
+}
+
+.modal-body li:hover {
+  transform: translateX(6px);
+  color: #ffc107;
+}
+
+
