@@ -24,7 +24,7 @@
     <meta name="twitter:description" content="Get in touch with Sol Tutoring & Coding Academy. Message us on Telegram, call directly, or send a quick inquiry — we usually reply within hours." />
     <meta name="twitter:image" content="https://solethiocoder.github.io/Sol-Tutoring-And-Coding-Academy/Images/logo.jpg" />
 <!-- Favicon -->
-    <link rel="icon" href="/Images/favicon.ico" />
+    <link rel="icon" href="../Images/favicon.ico" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -54,7 +54,9 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="/CSS/style.css" />
+    <!-- STCA shared theme (keeps this page in sync with the rest of the site) -->
+    <link rel="stylesheet" href="../CSS/theme.css" />
+    <link rel="stylesheet" href="../CSS/style.css" />
 
     <style>
       :root {
@@ -86,6 +88,7 @@
         font-family: "JetBrains Mono", monospace;
       }
 
+      /* NAVBAR — handled by shared theme.css now */
       section {
         padding-top: 0;
         padding-bottom: 3rem;
@@ -684,8 +687,8 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="/index.html">
-          <img src="/Images/logo.jpg" height="30" alt="STCA Logo" /> STCA
+        <a class="navbar-brand fw-bold" href="../index.html">
+          <img src="../Images/logo.jpg" height="30" alt="STCA Logo" /> STCA
         </a>
         <button
           class="navbar-toggler"
@@ -701,13 +704,13 @@
         <div class="collapse navbar-collapse" id="navmenu">
           <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item">
-              <a class="nav-link" href="/index.html">Home</a>
+              <a class="nav-link" href="../index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/HTML/courses.html">Courses</a>
+              <a class="nav-link" href="courses.html">Courses</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/HTML/contact.html">Contact</a>
+              <a class="nav-link active" href="contact.html">Contact</a>
             </li>
             <li class="nav-item ms-lg-3">
               <button id="mode-toggle" class="btn btn-outline-warning btn-sm">
@@ -964,13 +967,104 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="contact-section pb-5">
+      <div class="container">
+        <div class="text-center mb-4" data-aos="fade-up">
+          <span class="eyebrow eyebrow-light"><span class="dot"></span> Common questions</span>
+          <h3 class="font-display fw-bold mt-2">Before you reach out</h3>
+          <p class="text-muted mb-0">Quick answers — if yours isn't here, just message us.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion faq-accordion" id="faqAccordion" data-aos="fade-up" data-aos-delay="100">
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="faqHeading1">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                    Are sessions online or in person?
+                  </button>
+                </h4>
+                <div id="faq1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Both — we offer online sessions over video call for students anywhere, and
+                    in-person sessions for students based in Addis Ababa. Let us know your
+                    preference when you reach out and we'll work around it.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="faqHeading2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    How long is each session and how is it priced?
+                  </button>
+                </h4>
+                <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Sessions are typically 1 hour, billed at an hourly rate that depends on the
+                    course (500–600 Birr/hour). There are no packages to buy upfront — you pay
+                    as you go, and can pause or switch courses anytime.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="faqHeading3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    What age groups or skill levels do you teach?
+                  </button>
+                </h4>
+                <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    All of them — from young kids starting with Scratch, to teens preparing for
+                    national exams, to adults learning Python or web development from zero.
+                    Every course is 1:1, so we tailor the pace to whoever's in the seat.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="faqHeading4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                    Do I need my own computer or software?
+                  </button>
+                </h4>
+                <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    For online sessions, yes — a laptop or desktop with a stable internet
+                    connection. We'll tell you exactly what (free) software to install before
+                    your first session, like Python or a code editor.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="faqHeading5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                    What if I want to cancel or reschedule?
+                  </button>
+                </h4>
+                <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Just message us on Telegram or by phone as early as you can — we're flexible
+                    and will find a new time that works for you, no penalty for reasonable notice.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="stca-footer">
       <div class="container py-5">
         <div class="row gy-4">
           <div class="col-lg-4">
-            <a href="/index.html" class="footer-brand">
-              <img src="/Images/logo.jpg" height="32" alt="STCA Logo" /> STCA
+            <a href="../index.html" class="footer-brand">
+              <img src="../Images/logo.jpg" height="32" alt="STCA Logo" /> STCA
             </a>
             <p class="footer-blurb mt-3">
               Sol Tutoring &amp; Coding Academy helps students in Addis Ababa
@@ -987,19 +1081,19 @@
           <div class="col-lg-2 col-6">
             <h6 class="footer-heading">Explore</h6>
             <ul class="footer-links">
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/HTML/courses.html">Courses</a></li>
-              <li><a href="/HTML/contact.html">Contact</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-6">
             <h6 class="footer-heading">Courses</h6>
             <ul class="footer-links">
-              <li><a href="/HTML/python-course.html">Python</a></li>
-              <li><a href="/HTML/web-course.html">Web Development</a></li>
-              <li><a href="/HTML/scratch-course.html">Scratch</a></li>
-              <li><a href="/HTML/math-course.html">Math Tutoring</a></li>
+              <li><a href="python-course.html">Python</a></li>
+              <li><a href="web-course.html">Web Development</a></li>
+              <li><a href="scratch-course.html">Scratch</a></li>
+              <li><a href="math-course.html">Math Tutoring</a></li>
             </ul>
           </div>
 
@@ -1035,7 +1129,7 @@
 
     <!-- Three.js for the 3D animated node network -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="/JS/node-network.js"></script>
+    <script src="../JS/node-network.js"></script>
 
     <script>
       // Initialize AOS

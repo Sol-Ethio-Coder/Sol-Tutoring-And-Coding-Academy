@@ -409,6 +409,59 @@ body.dark-mode .list-group-item:hover {
 }
 
 /* =========================================================
+   FAQ ACCORDION
+========================================================= */
+.faq-accordion .accordion-item {
+  border: none;
+  border-radius: 16px !important;
+  margin-bottom: 0.9rem;
+  overflow: hidden;
+  box-shadow: 0 10px 28px -16px rgba(11, 19, 48, 0.18);
+}
+
+.faq-accordion .accordion-button {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 0.98rem;
+  background: #fff;
+  color: var(--stca-navy-2);
+  padding: 1.1rem 1.4rem;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  background: linear-gradient(135deg, #eef9f8, #eef2ff);
+  color: var(--stca-navy-2);
+  box-shadow: none;
+}
+
+.faq-accordion .accordion-button:focus {
+  box-shadow: 0 0 0 3px rgba(41, 227, 214, 0.25);
+}
+
+.faq-accordion .accordion-button::after {
+  filter: hue-rotate(140deg) saturate(2);
+}
+
+.faq-accordion .accordion-body {
+  background: #fff;
+  color: #555b78;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  padding: 0.2rem 1.4rem 1.4rem;
+}
+
+body.dark-mode .faq-accordion .accordion-button,
+body.dark-mode .faq-accordion .accordion-body {
+  background: #181f3d;
+  color: #c7cdf0;
+}
+
+body.dark-mode .faq-accordion .accordion-button:not(.collapsed) {
+  background: rgba(41, 227, 214, 0.1);
+  color: var(--stca-cyan);
+}
+
+/* =========================================================
    MOBILE & CROSS-BROWSER COMPATIBILITY FIXES
 ========================================================= */
 
@@ -470,6 +523,8 @@ p, li, .channel-value, .footer-blurb {
 
   /* Tall embedded iframes (Google Form / Map) get shorter on phones
      so the page doesn't turn into one giant scroll well */
+  #google-form-wrap iframe {
+  }
   .map-frame-wrap iframe {
     height: 200px;
   }
@@ -477,6 +532,59 @@ p, li, .channel-value, .footer-blurb {
   /* Footer columns get a bit tighter on very small screens */
   .footer-blurb {
     max-width: 100%;
+  }
+
+  /* Card padding was tuned for desktop (1.75rem) and eats too much
+     of a 320-375px-wide phone screen — give content more breathing room */
+  .glass-card,
+  .testimonial-card,
+  .pricing-card,
+  .booking-card .p-4,
+  .booking-card .p-md-5 {
+    padding: 1.25rem !important;
+  }
+
+  /* Stat rows (hero stats, testimonial stat-strip) need a smaller gap
+     and centered wrapping so 3-4 numbers don't crowd or clip on phones */
+  .hero-stats {
+    gap: 1.1rem !important;
+    justify-content: center;
+  }
+
+  .stat-strip {
+    row-gap: 1.5rem;
+  }
+
+  .stat-strip b {
+    font-size: 1.35rem;
+  }
+
+  /* The "Most popular" badge can overhang a narrow card's edge —
+     pull it fully inside the card boundary on small screens */
+  .pricing-card .badge-popular {
+    right: 0.75rem;
+    font-size: 0.65rem;
+  }
+
+  /* Section vertical rhythm: desktop's 3rem bottom padding plus a
+     hero's own padding stacks into too much dead space on phones */
+  section {
+    padding-bottom: 2rem;
+  }
+}
+
+/* Tablet range: avoid content touching the screen edges and give
+   grids a touch more breathing room before they hit phone rules */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .glass-card,
+  .testimonial-card,
+  .pricing-card {
+    padding: 1.5rem !important;
   }
 }
 
@@ -500,6 +608,28 @@ p, li, .channel-value, .footer-blurb {
   .nav-link {
     min-height: 38px;
   }
+
+  /* Bootstrap's default carousel arrows are a famously tiny, easy-to-miss
+     tap target on touch screens — enlarge and add a visible backdrop */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 15%;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: rgba(11, 19, 48, 0.35);
+    border-radius: 50%;
+    padding: 0.5rem;
+    background-origin: content-box;
+  }
+}
+
+/* The navbar hamburger button is small by default — give it real
+   padding so it's comfortable to tap on a phone */
+.navbar-toggler {
+  padding: 0.5rem 0.7rem;
 }
 
 /* Avoid Safari iOS zoom-on-focus by ensuring inputs are >=16px */
