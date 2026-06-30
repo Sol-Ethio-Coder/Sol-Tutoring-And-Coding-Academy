@@ -24,6 +24,38 @@ h1, h2, h3, h4, h5, .navbar-brand, .font-display {
 }
 
 /* =========================================================
+   NAVBAR BRAND — logo + wordmark styling
+========================================================= */
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.navbar-brand img {
+  border-radius: 8px;
+  border: 1.5px solid rgba(41, 227, 214, 0.4);
+  box-shadow: 0 0 14px rgba(41, 227, 214, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.08) rotate(-3deg);
+  box-shadow: 0 0 20px rgba(41, 227, 214, 0.55);
+}
+
+.navbar-brand .brand-text {
+  background: linear-gradient(100deg, #fff 0%, var(--stca-cyan) 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--stca-cyan);
+  font-weight: 800;
+}
+
+/* =========================================================
    NAVBAR
 ========================================================= */
 nav.navbar.bg-dark {
@@ -635,6 +667,34 @@ p, li, .channel-value, .footer-blurb {
 /* Avoid Safari iOS zoom-on-focus by ensuring inputs are >=16px */
 input, select, textarea {
   font-size: 16px;
+}
+
+/* =========================================================
+   HERO MISSION STATEMENT
+========================================================= */
+.hero-mission {
+  border-left: 3px solid var(--stca-cyan);
+  background: rgba(41, 227, 214, 0.06);
+  border-radius: 0 12px 12px 0;
+  padding: 0.85rem 1.1rem;
+  margin: 1.1rem 0 0;
+}
+
+.hero-mission-label {
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stca-amber);
+  margin-bottom: 0.3rem;
+}
+
+.hero-mission p {
+  font-size: 0.95rem;
+  color: #d6dafc;
+  font-style: italic;
+  line-height: 1.6;
 }
 
 /* =========================================================
