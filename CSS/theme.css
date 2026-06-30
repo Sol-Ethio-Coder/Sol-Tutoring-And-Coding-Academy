@@ -638,6 +638,121 @@ input, select, textarea {
 }
 
 /* =========================================================
+   HERO STATS ROW (shared across hero sections sitewide)
+========================================================= */
+.hero-stats {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-stats .stat b {
+  font-family: "Sora", sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+  display: block;
+}
+
+.hero-stats .stat span {
+  font-size: 0.8rem;
+  color: #9aa3d6;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* =========================================================
+   HERO LOGO — floating glow animation
+========================================================= */
+.hero-logo-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-logo-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -8%;
+  background: radial-gradient(circle, rgba(41, 227, 214, 0.35), transparent 70%);
+  border-radius: 50%;
+  filter: blur(20px);
+  animation: stca-logo-glow 3.2s ease-in-out infinite;
+  z-index: 0;
+}
+
+.hero-logo-img {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px -20px rgba(41, 227, 214, 0.45);
+  animation: stca-logo-float 5s ease-in-out infinite;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-logo-wrap:hover .hero-logo-img {
+  transform: scale(1.04) rotate(-1.5deg);
+  box-shadow: 0 30px 70px -16px rgba(41, 227, 214, 0.6);
+}
+
+@keyframes stca-logo-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(1deg); }
+}
+
+@keyframes stca-logo-glow {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo-img,
+  .hero-logo-wrap::before {
+    animation: none;
+  }
+}
+
+/* =========================================================
+   STUNNING HEADING UTILITY — gradient text for key headings
+========================================================= */
+.gradient-heading {
+  background: linear-gradient(100deg, #fff 0%, var(--stca-cyan) 55%, var(--stca-amber) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--stca-cyan); /* fallback if background-clip text isn't supported */
+  filter: drop-shadow(0 4px 18px rgba(41, 227, 214, 0.35));
+}
+
+/* Variant for headings sitting on light/white section backgrounds —
+   keeps the same cyan/amber accent but anchors on navy instead of white */
+.gradient-heading-dark {
+  background: linear-gradient(100deg, var(--stca-navy-2) 0%, #1fb9ae 55%, var(--stca-amber) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--stca-navy-2);
+}
+
+body.dark-mode .gradient-heading-dark {
+  background: linear-gradient(100deg, #fff 0%, var(--stca-cyan) 55%, var(--stca-amber) 100%);
+  color: var(--stca-cyan);
+}
+
+h2.font-display, h3.font-display {
+  position: relative;
+}
+
+/* Small accent underline used under section titles for visual punch */
+.title-accent::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: 0.75rem auto 0;
+  background: linear-gradient(90deg, var(--stca-cyan), var(--stca-amber));
+  border-radius: 4px;
+}
+
+/* =========================================================
    TESTIMONIALS
 ========================================================= */
 .testimonials-section {
